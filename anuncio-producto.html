@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facturación electrónica sin mensualidades</title>
+<!-- Owner: Business Analyst. DRAFT. Revisar con abogado/contador antes de publicar.
+     [PENDIENTE]: nombre del producto, contacto, IVA/recibo del precio. -->
+<style>
+  :root {
+    --ink: #14213d;
+    --muted: #4a5568;
+    --brand: #0b6e4f;
+    --brand-soft: #e6f4ee;
+    --accent: #f2b705;
+    --paper: #ffffff;
+    --page: #eef1f4;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--page);
+    color: var(--ink);
+    font-family: "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    line-height: 1.4;
+    padding: 24px 16px;
+  }
+  .sheet {
+    background: var(--paper);
+    max-width: 794px; /* A4 width at 96 dpi */
+    margin: 0 auto;
+    padding: 44px 48px 36px;
+    border-radius: 6px;
+    box-shadow: 0 2px 14px rgba(0,0,0,.12);
+  }
+  .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 99px;
+  }
+  h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    margin: 16px 0 12px;
+    letter-spacing: -.01em;
+  }
+  h1 em { font-style: normal; color: var(--brand); }
+  .lead { font-size: 18px; color: var(--muted); max-width: 560px; }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 28px 0 22px;
+  }
+  .card {
+    border: 1px solid #dde3ea;
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .card b { display: block; font-size: 16px; margin-bottom: 3px; }
+  .card span { font-size: 14px; color: var(--muted); }
+  .price {
+    background: var(--ink);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .price .big { font-size: 44px; font-weight: 800; line-height: 1; }
+  .price .big small { font-size: 16px; font-weight: 600; margin-left: 6px; color: var(--accent); }
+  .price p { font-size: 15px; max-width: 380px; color: #dfe6f0; }
+  .price strong { color: #fff; }
+  .steps { margin: 22px 0 6px; font-size: 15px; color: var(--muted); }
+  .steps b { color: var(--ink); }
+  .cta {
+    margin-top: 20px;
+    border-top: 2px solid var(--accent);
+    padding-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 15px;
+  }
+  .cta strong { font-size: 18px; }
+  .fine { margin-top: 12px; font-size: 11.5px; color: #6b7684; }
+  @media (max-width: 560px) {
+    .sheet { padding: 28px 20px; }
+    h1 { font-size: 30px; }
+    .grid { grid-template-columns: 1fr; }
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .sheet { box-shadow: none; border-radius: 0; max-width: none; padding: 14mm 16mm; }
+    @page { size: A4; margin: 0; }
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <span class="tag">Para restaurantes y tiendas del Ecuador</span>
+  <h1>Facture al SRI <em>sin pagar mensualidades</em></h1>
+  <p class="lead">Un programa que se instala en su computadora y emite facturas electrónicas con su propia firma. Usted paga una vez. Sus facturas son suyas.</p>
+
+  <section class="grid" aria-label="Ventajas">
+    <div class="card"><b>Pago único</b><span>Sin cuotas mensuales. El primer año de mantenimiento está incluido.</span></div>
+    <div class="card"><b>Sus datos son suyos</b><span>Se guardan en su computadora y en su propio Firebase. Nosotros no guardamos nada suyo.</span></div>
+    <div class="card"><b>Fácil de usar</b><span>Pantallas sencillas para emitir facturas y notas de crédito. Imprima el RIDE o guárdelo en PDF.</span></div>
+    <div class="card"><b>Cuida sus facturas</b><span>Si se corta la luz o falla el internet, el sistema se recupera solo, sin perder ni repetir facturas.</span></div>
+    <div class="card"><b>Respaldo para los 7 años</b><span>Copia de sus comprobantes en su propio Firebase, para cumplir con la conservación que exige la ley.</span></div>
+    <div class="card"><b>Pruébelo sin riesgo</b><span>Haga todas sus pruebas en el ambiente de pruebas del SRI antes de comprar la licencia.</span></div>
+  </section>
+
+  <section class="price" aria-label="Precio">
+    <div class="big">$119<small>precio final</small></div>
+    <p><strong>Licencia por RUC, pago único.</strong> Incluye instalación guiada y un año de actualizaciones y soporte. Después, mantenimiento opcional de $39 al año; el programa sigue emitiendo aunque no renueve.</p>
+  </section>
+
+  <p class="steps"><b>Cómo empezar:</b> 1) Instale en su PC con Windows 10 o superior. 2) Cargue su firma electrónica y los datos de su RUC. 3) Pruebe en ambiente de pruebas. 4) Active su licencia y empiece a facturar.</p>
+
+  <div class="cta">
+    <div><strong>Escríbanos por WhatsApp</strong><br>[PENDIENTE: número de WhatsApp]</div>
+    <div>[PENDIENTE: correo]<br>[PENDIENTE: nombre del producto]</div>
+  </div>
+  <p class="fine">Requiere su propio certificado de firma electrónica vigente y un proyecto Firebase propio (gratuito para el uso normal de un negocio pequeño). Se necesita internet para enviar al SRI. Precio en dólares, impuestos según corresponda: [PENDIENTE: confirmar con contador].</p>
+</main>
+</body>
+</html>
